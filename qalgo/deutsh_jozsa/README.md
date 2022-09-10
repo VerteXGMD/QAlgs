@@ -77,7 +77,7 @@ Now we are given boolean function $f(x_1, x_2, x_3, ..., x_n)$ which is promised
 
 ## Classical solution
 
-If we went through half of possible results + 1 and we didn't meet another value, then function is constant, if we met, then function is balanced. In worst case, we go through half of results been the same which is $2^{n - 1}$ iterations. For instance, if $n = 200$, then amount of iterations required would be: $160693804425899027554196209234116260252220...$.
+If we went through half of possible results + 1 and we didn't meet another value, then function is constant, if we met, then function is balanced. In worst case, we go through half of results been the same which is $2^{n - 1}$ iterations. For instance, if $n = 200$, then amount of iterations required would be: 160693804425899027554196209234116260252220...
 <p align="center"><img src="image2.png"></p>
 
 ## Quantum solution

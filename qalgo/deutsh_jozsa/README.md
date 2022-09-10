@@ -1,5 +1,5 @@
 # Deutsh's algorithm
-Deutsh's algorithm is the beginning of Deutsh-Jozsa algorithm and is a special case of it. The task is: we are given a hideen function $ f(x) $, where $ x $ is either $ 0 $, or $ 1 $. Our task is to determine wether $ f(0) = f(1) $ or not. The task is very simple and can be easily done with classical computer, but we will learn about this one.
+Deutsh's algorithm is the beginning of Deutsh-Jozsa algorithm and is a special case of it. The task is: we are given a hideen function $f(x)$, where $x$ is either $0$, or $1$. Our task is to determine wether $f(0) = f(1)$ or not. The task is very simple and can be easily done with classical computer, but we will learn about this one.
 
 In quantum computing we have object called "oracle", which is quantum analog of hidden function. As long as it is quantum gate, it is reversable. Quantum oracle maps value $\lvert x \rangle\lvert y \rangle$ to $\lvert x \rangle \lvert y \oplus f(x) \rangle$:
 
@@ -13,7 +13,7 @@ $$
 U_f \lvert x \rangle \lvert - \rangle = U_f \lvert x \rangle \frac{1}{\sqrt{2}} (\lvert 0 \rangle - \lvert 1 \rangle) = \lvert x \rangle \frac{1}{\sqrt{2}} (\lvert f(x) \rangle - \lvert 1 \oplus f(x) \rangle)
 $$
 
-If we paste different values of $ f(x) $, we get:
+If we paste different values of $f(x)$, we get:
 
 $$
 f(x) = 0 \to \lvert x \rangle \frac{1}{\sqrt{2}} (\lvert 0 \rangle - \lvert 1 \rangle) \\
@@ -46,17 +46,19 @@ $$
 $$
 
 Ignore global phase + last qubit:
+
 $$
 \frac{1}{\sqrt{2}} (\lvert 0 \rangle + (-1)^{f(0) \oplus f(1)})
 $$
 
 Applying hadamard transform again:
+
 $$
 \frac{1}{2} ((\lvert 0 \rangle + \lvert 1 \rangle) + ((-1)^{f(0) \oplus f(1)} \lvert 0 \rangle - (-1)^{f(0) \oplus f(1)} \lvert 1 \rangle)) = \\
 \frac{1}{2} ((1 + (-1)^{f(0) \oplus f(1)})\lvert 0 \rangle + (1 - (-1)^{f(0) \oplus f(1)})\lvert 1 \rangle)
 $$
 
-If $ f(0) = f(1) $, then state is equal to:
+If $f(0) = f(1)$, then state is equal to:
 
 $$
 \frac{1}{2} ((1 + (-1)^0)\lvert 0 \rangle + (1 - (-1)^0)\lvert 1 \rangle) =
